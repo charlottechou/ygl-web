@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style="{ backgroundImage: 'url(/img/header.82066f0c.jpg)' }">
+  <div id="app">
     <el-container>
       <el-header :height="'auto'" :style="{ padding: '0px' }">
         <Header />
@@ -33,12 +33,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  background: center top no-repeat #e0dede;
+  background-color: white;
 }
 .body {
   background-color: rgba(255, 255, 255, 0.5);
-  margin-right: 150px;
-  margin-left: 150px;
 }
 body {
   margin: 0px;

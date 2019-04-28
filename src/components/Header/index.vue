@@ -1,32 +1,5 @@
 <template>
   <div id="header">
-    <!-- <div class="sign-bar">
-      <div class="slogan">桂林欢迎您！</div>
-      <div class="bar-set">
-        <el-button type="text" class="login">您好，请登录</el-button>
-        <el-button type="text">免费注册</el-button>
-        <el-button type="text" icon="el-icon-message">消息</el-button>
-        <el-dropdown :style="{ marginLeft: '10px' }">
-          <el-button type="text">
-            我的账户<i class="el-icon-arrow-down el-icon--right"></i>
-          </el-button>
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>我的收藏</el-dropdown-item>
-            <el-dropdown-item>我的游记</el-dropdown-item>
-            <el-dropdown-item>我的订单</el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
-      </div>
-    </div> -->
-    <!-- <div class="name">
-      <img class="logo" src="../../assets/header.jpg" alt />
-      <div class="word">
-        <h2 class="title">游桂林</h2>
-        <h3 class="content">
-          "桂林，中国首批国家历史文化名城、中国优秀旅游城市，境内的山水风光举世闻名，千百年来享有“桂林山水甲天下”的美誉。"
-        </h3>
-      </div>
-    </div> -->
     <div class="menu">
       <el-menu
         :default-active="activeIndex2"
@@ -37,14 +10,14 @@
         text-color="#409EFF"
         active-text-color="#ffd04b"
       >
-        <el-menu-item index="1">首页</el-menu-item>
-        <el-menu-item index="2">风景名胜</el-menu-item>
-        <el-menu-item index="3">休闲娱乐</el-menu-item>
-        <el-menu-item index="4">人文历史</el-menu-item>
-        <el-menu-item index="5">美食</el-menu-item>
-        <el-menu-item index="6">游记</el-menu-item>
-        <el-menu-item index="7">旅游线路</el-menu-item>
-        <el-menu-item index="8">关于</el-menu-item>
+        <el-menu-item index="/">首页</el-menu-item>
+        <el-menu-item index="/famous">风景名胜</el-menu-item>
+        <el-menu-item index="/entertainment">休闲娱乐</el-menu-item>
+        <el-menu-item index="/history">人文历史</el-menu-item>
+        <el-menu-item index="/food">美食</el-menu-item>
+        <el-menu-item index="/note">游记</el-menu-item>
+        <el-menu-item index="route">旅游线路</el-menu-item>
+        <!-- <el-menu-item index="/about">关于</el-menu-item> -->
       </el-menu>
     </div>
   </div>
@@ -58,8 +31,8 @@ export default {
     };
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+    handleSelect(key) {
+      this.$router.push(key);
     }
   }
 };
@@ -94,6 +67,7 @@ export default {
   margin-left: 50px;
 }
 .menu {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
   background-color: white;
   display: flex;
