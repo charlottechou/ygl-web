@@ -16,7 +16,7 @@ export function publishPost(data) {
   });
 }
 
-export function Signin(data) {
+export function Signup(data) {
   return request({
     url: "/api/Auth/signin",
     method: "post",

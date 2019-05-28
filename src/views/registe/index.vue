@@ -71,7 +71,14 @@
   </div>
 </template>
 <script>
-const typeOptions = ["休闲娱乐", "人文历史", "美食", "最热门", "网红打卡", "风景名胜"];
+const typeOptions = [
+  "休闲娱乐",
+  "人文历史",
+  "美食",
+  "最热门",
+  "网红打卡",
+  "风景名胜"
+];
 export default {
   data() {
     var checkAge = (rule, value, callback) => {
@@ -122,14 +129,15 @@ export default {
       },
 
       form: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: ""
+        id: 0,
+        username: "hejianqin",
+        password: "string",
+        sex: 0,
+        nickname: "string",
+        age: 0,
+        tag: 0,
+        head: "string",
+        role: "string"
       },
       active: 1,
       firstForm: {
@@ -149,6 +157,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
+          this.form.age = Date.parse(new Date(this.form.age));
           alert("submit!");
         } else {
           console.log("error submit!!");

@@ -1,24 +1,22 @@
 <template>
   <div class="login">
     <el-container class="login-all">
-      <img src="../../assets/login-logo.png" alt class="login-img" />
+      <img src="../../assets/login-logo.png" alt class="login-img">
       <el-main class="login-box">
         <el-form ref="form" :model="form" label-width="80px">
           <el-form-item>
-            <el-input v-model="form.name" placeholder="您的用户名"></el-input>
+            <el-input v-model="form.username" placeholder="您的用户名"></el-input>
           </el-form-item>
           <el-form-item>
             <el-input v-model="form.password" placeholder="您的密码"></el-input>
           </el-form-item>
         </el-form>
         <div class="link-button">
-          <el-link :underline="false" class="forreg-button" @click="registe"
-            >没有账号？去注册</el-link
-          >
+          <el-link :underline="false" class="forreg-button" @click="registe">没有账号？去注册</el-link>
           <el-button type="text" class="forpass-button">忘记密码</el-button>
         </div>
         <div class="submit-btn">
-          <button>登 录</button>
+          <button @click="onSubmit">登 录</button>
         </div>
       </el-main>
     </el-container>
@@ -74,18 +72,23 @@
 }
 </style>
 <script>
+import { Auth } from "@/api/login.js";
+import { setToken } from "@/utils/auth.js";
 export default {
   data() {
     return {
       form: {
-        name: "",
+        username: "",
         password: ""
       }
     };
   },
   methods: {
     onSubmit() {
-      console.log("submit!");
+      Auth(this.form).then(resp => {
+        setToken(resp.data.token);
+        this.$message(resp.message);
+      });
     },
     login: function() {
       this.$router.push("/login");
