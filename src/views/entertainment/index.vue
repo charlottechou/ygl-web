@@ -1,36 +1,32 @@
 <template>
   <div class="entertainment">
-    <div class="back-module">
-      <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">所有分类</el-breadcrumb-item>
-        <el-breadcrumb-item>休闲娱乐</el-breadcrumb-item>
-      </el-breadcrumb>
-    </div>
-    <div class="fa-top">
-      <div class="chose-module">
-        <div class="chose-brand">
-          <h5>类型:</h5>
-          <el-checkbox-group class="chose-box" v-model="checkedCities" :min="0" :max="4">
-            <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
-          </el-checkbox-group>
-        </div>
-      </div>
-      <div class="serch-module">
-        <el-input placeholder="请输入内容" v-model="input" clearable class="serch-input"></el-input>
-        <el-button type="primary" icon="el-icon-search" class="serch-button">搜索</el-button>
-      </div>
-    </div>
     <el-container>
       <el-main>
-        <div class="ygl-famous">
+        <div class="back-module">
+          <el-breadcrumb separator-class="el-icon-arrow-right">
+            <el-breadcrumb-item :to="{ path: '/' }">所有分类</el-breadcrumb-item>
+            <el-breadcrumb-item>休闲娱乐</el-breadcrumb-item>
+          </el-breadcrumb>
+        </div>
+        <div class="fa-top">
+          <div class="chose-module">
+            <div class="chose-brand">
+              <h5>类型:</h5>
+              <el-checkbox-group class="chose-box" v-model="checkedCities" :min="0" :max="9">
+                <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
+              </el-checkbox-group>
+            </div>
+          </div>
+        </div>
+        <div class="ygl-entertainment">
           <div class="famous-item">
             <div class="item-img">
-              <a href="/i/12427602.html" target="_blank">
+              <a target="_blank" @click="detail">
                 <img
                   class="img-self"
-                  data-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
+                  data-src="http://img0.imgtn.bdimg.com/it/u=3999121057,138337229&fm=26&gp=0.jpg"
                   data-rt-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
-                  src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
+                  src="http://www.pop-photo.com.cn/data/attachment/forum/201810/14/213801rp3kmi16fardnakc.jpg"
                   style="display: inline;"
                 >
               </a>
@@ -39,12 +35,12 @@
               <div class="item-word">
                 <dl>
                   <dt class="word-title">
-                    <a href="/i/12427602.html" target="_blank">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
+                    <a target="_blank" @click="detail">桂林·阳朔西街</a>
                   </dt>
                   <dd class="word-content">
-                    <a href="/i/12427602.html" target="_blank">
-                      心里的川西
-                      旅行的确是件奢侈的事，要么消耗青春，要么浪费金钱。但即使是这样，也总关不住那颗早已漂泊在外的心。过了“十岁不愁，二十不悔”的年纪，总得四处走走才能不留遗憾。但生活在...
+                    <a target="_blank" @click="detail">
+                      历经1400多年的西街，是阳朔最古老繁华的街道，也是阳朔重要旅游景点之一。
+                      西街由觅食、逛街、泡吧等多个词汇集结而成，正因如此丰富多彩，成了阳朔一道独特而靓...
                     </a>
                   </dd>
                 </dl>
@@ -52,11 +48,11 @@
               <div class="item-button">
                 <div class="location-all">
                   <i class="el-icon-location"></i>
-                  <div class="location-word">桂林市·象山区</div>
+                  <div class="location-word">桂林市·阳朔</div>
                 </div>
                 <div class="button-user">
                   <el-tooltip class="item" effect="dark" content="点赞" placement="bottom">
-                    <el-button type="danger" icon="el-icon-circle-check-outline" circle></el-button>
+                    <el-button type="danger" icon="el-icon-check" circle></el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="收藏" placement="bottom">
                     <el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -70,7 +66,7 @@
           </div>
           <div class="famous-item">
             <div class="item-img">
-              <a href="/i/12427602.html" target="_blank">
+              <a target="_blank" @click="detail">
                 <img
                   class="img-self"
                   data-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
@@ -84,10 +80,10 @@
               <div class="item-word">
                 <dl>
                   <dt class="word-title">
-                    <a href="/i/12427602.html" target="_blank">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
+                    <a target="_blank" @click="detail">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
                   </dt>
                   <dd class="word-content">
-                    <a href="/i/12427602.html" target="_blank">
+                    <a target="_blank" @click="detail">
                       心里的川西
                       旅行的确是件奢侈的事，要么消耗青春，要么浪费金钱。但即使是这样，也总关不住那颗早已漂泊在外的心。过了“十岁不愁，二十不悔”的年纪，总得四处走走才能不留遗憾。但生活在...
                     </a>
@@ -101,7 +97,7 @@
                 </div>
                 <div class="button-user">
                   <el-tooltip class="item" effect="dark" content="点赞" placement="bottom">
-                    <el-button type="danger" icon="el-icon-circle-check-outline" circle></el-button>
+                    <el-button type="danger" icon="el-icon-check" circle></el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="收藏" placement="bottom">
                     <el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -115,7 +111,7 @@
           </div>
           <div class="famous-item">
             <div class="item-img">
-              <a href="/i/12427602.html" target="_blank">
+              <a target="_blank" @click="detail">
                 <img
                   class="img-self"
                   data-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
@@ -129,10 +125,10 @@
               <div class="item-word">
                 <dl>
                   <dt class="word-title">
-                    <a href="/i/12427602.html" target="_blank">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
+                    <a target="_blank" @click="detail">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
                   </dt>
                   <dd class="word-content">
-                    <a href="/i/12427602.html" target="_blank">
+                    <a target="_blank" @click="detail">
                       心里的川西
                       旅行的确是件奢侈的事，要么消耗青春，要么浪费金钱。但即使是这样，也总关不住那颗早已漂泊在外的心。过了“十岁不愁，二十不悔”的年纪，总得四处走走才能不留遗憾。但生活在...
                     </a>
@@ -146,7 +142,7 @@
                 </div>
                 <div class="button-user">
                   <el-tooltip class="item" effect="dark" content="点赞" placement="bottom">
-                    <el-button type="danger" icon="el-icon-circle-check-outline" circle></el-button>
+                    <el-button type="danger" icon="el-icon-check" circle></el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="收藏" placement="bottom">
                     <el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -160,7 +156,7 @@
           </div>
           <div class="famous-item">
             <div class="item-img">
-              <a href="/i/12427602.html" target="_blank">
+              <a target="_blank" @click="detail">
                 <img
                   class="img-self"
                   data-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
@@ -174,10 +170,10 @@
               <div class="item-word">
                 <dl>
                   <dt class="word-title">
-                    <a href="/i/12427602.html" target="_blank">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
+                    <a target="_blank" @click="detail">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
                   </dt>
                   <dd class="word-content">
-                    <a href="/i/12427602.html" target="_blank">
+                    <a target="_blank" @click="detail">
                       心里的川西
                       旅行的确是件奢侈的事，要么消耗青春，要么浪费金钱。但即使是这样，也总关不住那颗早已漂泊在外的心。过了“十岁不愁，二十不悔”的年纪，总得四处走走才能不留遗憾。但生活在...
                     </a>
@@ -191,7 +187,7 @@
                 </div>
                 <div class="button-user">
                   <el-tooltip class="item" effect="dark" content="点赞" placement="bottom">
-                    <el-button type="danger" icon="el-icon-circle-check-outline" circle></el-button>
+                    <el-button type="danger" icon="el-icon-check" circle></el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="收藏" placement="bottom">
                     <el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -209,6 +205,10 @@
         </div>
       </el-main>
       <el-aside>
+        <div class="serch-module">
+          <el-input placeholder="请输入内容" v-model="input" clearable class="serch-input"></el-input>
+          <el-button type="primary" icon="el-icon-search" class="serch-button">搜索</el-button>
+        </div>
         <el-menu :default-openeds="['1', '3']">
           <el-submenu index="1">
             <template slot="title">
@@ -262,12 +262,12 @@
             </el-submenu>
           </el-submenu>
         </el-menu>
-        <el-card class="box-card">
+        <el-card class="box-card" shadow="never">
           <div slot="header" class="clearfix">
             <span>热门推荐</span>
             <el-button style="float: right; padding: 3px 0" type="text">查看更多</el-button>
           </div>
-          <div v-for="o in 4" :key="o" class="text item">{{ "热门内容 " + o }}</div>
+          <div v-for="o in 4" :key="o" class="text box-item">{{ "热门内容 " + o }}</div>
         </el-card>
       </el-aside>
     </el-container>
@@ -282,22 +282,18 @@
 .fa-top {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 .chose-module {
   border-right: 1px;
-  width: 75%;
+
   display: flex;
   flex-direction: column;
 }
 .serch-module {
-  width: 285.5px;
   display: flex;
   flex-direction: row;
-  margin-left: 64.5px;
-}
-.serch-input {
-  width: 180px;
+  margin-top: 25px;
+  margin-left: 15px;
 }
 .serch-button {
   margin-left: 15px;
@@ -311,7 +307,7 @@
   margin-top: 24px;
   margin-left: 30px;
 }
-.ygl-famous {
+.ygl-entertainment {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -327,6 +323,7 @@
 }
 .img-self {
   width: 27rem;
+  height: 294px;
 }
 .item-left {
   display: flex;
@@ -372,16 +369,39 @@ a {
   color: #333;
   text-decoration: none;
 }
+.box-card {
+  margin-top: 30px;
+}
+.text {
+  font-size: 14px;
+}
+
+.box-item {
+  padding: 18px 0;
+}
 </style>
 
 <script>
-const cityOptions = ["上海", "北京", "广州", "深圳"];
+const cityOptions = [
+  "解放桥",
+  "东西巷",
+  "正阳步行街",
+  "乐满地主题乐园",
+  "龙胜温泉",
+  "中心广场",
+  "龙颈河漂流"
+];
 export default {
   data() {
     return {
-      checkedCities: ["上海", "北京"],
+      checkedCities: ["解放桥", "东西巷"],
       cities: cityOptions
     };
+  },
+  methods: {
+    detail: function() {
+      this.$router.push("/entertainmentPage");
+    }
   }
 };
 </script>
