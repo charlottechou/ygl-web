@@ -2,7 +2,7 @@
   <div class="writenote">
     <div class="img-all">
       <div class="img-bg">
-        <img src="..\..\assets\page_bg.png" width="1500px">
+        <img src="..\..\assets\page_bg.png" width="1500px" />
       </div>
       <div class="img-up">
         <div class="img-bn">
@@ -13,7 +13,7 @@
             :on-success="handleAvatarSuccess"
             :before-upload="beforeAvatarUpload"
           >
-            <img v-if="imageUrl" :src="imageUrl" class="avatar">
+            <img v-if="imageUrl" :src="imageUrl" class="avatar" />
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
           </el-upload>
         </div>
@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="set_title">
-          <input type="text" id="_j_title" value placeholder="填写游记标题" maxlength="48">
+          <input type="text" id="_j_title" value placeholder="填写游记标题" maxlength="48" />
           <span>
             可输入
             <strong>48</strong>字
@@ -50,7 +50,7 @@
           id="pagelet-block-bbce542b8b347d2e5164c2cdfc260f34"
           class="content pagelet-block"
           data-controller="/js/note/ControllerEditContent"
-          data-controller_data="{&quot;id&quot;:&quot;473361569&quot;}"
+          data-controller_data='{"id":"473361569"}'
         >
           <div class="block-loading loading_backward"></div>
           <div class="_j_content_box">
@@ -92,14 +92,21 @@
           @click="title_dialogVisible = true"
           icon="el-icon-s-flag"
           style="width:127px;margin-bottom:50px;"
-        >插入标题</el-button>
+          >插入标题</el-button
+        >
         <el-dialog
           title="提示"
           :visible.sync="title_dialogVisible"
           width="30%"
           :before-close="handleClose"
         >
-          <el-input type="text" placeholder="请输入标题" v-model="text" maxlength="10" show-word-limit></el-input>
+          <el-input
+            type="text"
+            placeholder="请输入标题"
+            v-model="text"
+            maxlength="10"
+            show-word-limit
+          ></el-input>
           <span slot="footer" class="dialog-footer">
             <el-button @click="title_dialogVisible = false">取 消</el-button>
             <el-button type="warning" @click="title_dialogVisible = false">确 定</el-button>
@@ -112,7 +119,8 @@
           @click="flag_dialogVisible = true"
           icon="el-icon-guide"
           style="width:127px;"
-        >插入标签</el-button>
+          >插入标签</el-button
+        >
         <el-dialog
           title="提示"
           :visible.sync="flag_dialogVisible"
@@ -409,4 +417,3 @@ export default {
   }
 };
 </script>
-

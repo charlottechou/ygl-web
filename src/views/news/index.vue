@@ -24,7 +24,7 @@
         </div>
         <el-card class="box-card" shadow="never">
           <div v-for="o in 19" :key="o" class="text item">
-            <el-link @click="detail">{{'列表内容 ' + o }}</el-link>
+            <el-link @click="detail">{{ "列表内容 " + o }}</el-link>
           </div>
         </el-card>
 
@@ -34,7 +34,12 @@
       </el-main>
       <el-aside>
         <div class="serch-module">
-          <el-input placeholder="请输入内容" v-model="input" clearable class="serch-input"></el-input>
+          <el-input
+            placeholder="请输入内容"
+            v-model="input"
+            clearable
+            class="serch-input"
+          ></el-input>
           <el-button type="primary" icon="el-icon-search" class="serch-button">搜索</el-button>
         </div>
         <el-menu :default-openeds="['1', '3']">
@@ -43,7 +48,9 @@
               <i class="el-icon-message"></i>导航一
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="1-1">选项1</el-menu-item>
               <el-menu-item index="1-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -51,7 +58,9 @@
               <el-menu-item index="1-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="1-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="1-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -60,7 +69,9 @@
               <i class="el-icon-menu"></i>导航二
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="2-1">选项1</el-menu-item>
               <el-menu-item index="2-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -68,7 +79,9 @@
               <el-menu-item index="2-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="2-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="2-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -77,7 +90,9 @@
               <i class="el-icon-setting"></i>导航三
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="3-1">选项1</el-menu-item>
               <el-menu-item index="3-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -85,7 +100,9 @@
               <el-menu-item index="3-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="3-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="3-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -96,7 +113,7 @@
             <el-button style="float: right; padding: 3px 0" type="text">查看更多</el-button>
           </div>
           <div v-for="o in 4" :key="o" class="text item">
-            <el-link class="el-link" @click="detail">{{'列表内容 ' + o }}</el-link>
+            <el-link class="el-link" @click="detail">{{ "列表内容 " + o }}</el-link>
           </div>
         </el-card>
       </el-aside>
@@ -167,14 +184,7 @@
 </style>
 
 <script>
-const typeOptions = [
-  "象山公园",
-  "两江四湖",
-  "东西巷",
-  "十里画廊",
-  "阳朔西街",
-  "大圩古镇"
-];
+const typeOptions = ["象山公园", "两江四湖", "东西巷", "十里画廊", "阳朔西街", "大圩古镇"];
 export default {
   data() {
     return {

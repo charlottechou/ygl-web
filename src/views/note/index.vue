@@ -13,7 +13,9 @@
             <div class="chose-brand">
               <h5>类型:</h5>
               <el-checkbox-group class="chose-box" v-model="checkedTypes" :min="0" :max="6">
-                <el-checkbox v-for="type in types" :label="type" :key="type">{{ type }}</el-checkbox>
+                <el-checkbox v-for="type in types" :label="type" :key="type">{{
+                  type
+                }}</el-checkbox>
               </el-checkbox-group>
             </div>
           </div>
@@ -28,12 +30,9 @@
                 <el-dropdown-item>最新发布</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
-            <el-button
-              type="primary"
-              icon="el-icon-edit"
-              class="button-write"
-              @click="writenote"
-            >写游记</el-button>
+            <el-button type="primary" icon="el-icon-edit" class="button-write" @click="writenote"
+              >写游记</el-button
+            >
           </div>
         </div>
 
@@ -41,14 +40,12 @@
           <div class="note-item" @click="detail">
             <div class="item-img">
               <a target="_blank">
-                <img src="..\..\assets\游记.jpeg" class="img-self">
+                <img src="..\..\assets\游记.jpeg" class="img-self" />
               </a>
             </div>
             <div class="item-word">
               <a target="_blank" class="word-self1">
-                <div class="date">
-                  <span class="day">21</span>/Apr.2019
-                </div>
+                <div class="date"><span class="day">21</span>/Apr.2019</div>
                 <h3>十年之约·我们的桂林之行</h3>
               </a>
             </div>
@@ -56,14 +53,12 @@
           <div class="note-item" @click="detail">
             <div class="item-img">
               <a target="_blank">
-                <img src="..\..\assets\游记.jpeg" class="img-self">
+                <img src="..\..\assets\游记.jpeg" class="img-self" />
               </a>
             </div>
             <div class="item-word">
               <a target="_blank" class="word-self2">
-                <div class="date">
-                  <span class="day">21</span>/Apr.2019
-                </div>
+                <div class="date"><span class="day">21</span>/Apr.2019</div>
                 <h3>十年之约·我们的桂林之行</h3>
               </a>
             </div>
@@ -71,14 +66,12 @@
           <div class="note-item" @click="detail">
             <div class="item-img">
               <a target="_blank">
-                <img src="..\..\assets\游记.jpeg" class="img-self">
+                <img src="..\..\assets\游记.jpeg" class="img-self" />
               </a>
             </div>
             <div class="item-word">
               <a target="_blank" class="word-self3">
-                <div class="date">
-                  <span class="day">21</span>/Apr.2019
-                </div>
+                <div class="date"><span class="day">21</span>/Apr.2019</div>
                 <h3>十年之约·我们的川藏之行</h3>
               </a>
             </div>
@@ -86,14 +79,12 @@
           <div class="note-item" @click="detail">
             <div class="item-img">
               <a target="_blank">
-                <img src="..\..\assets\游记.jpeg" class="img-self">
+                <img src="..\..\assets\游记.jpeg" class="img-self" />
               </a>
             </div>
             <div class="item-word">
               <a target="_blank" class="word-self4">
-                <div class="date">
-                  <span class="day">21</span>/Apr.2019
-                </div>
+                <div class="date"><span class="day">21</span>/Apr.2019</div>
                 <h3>十年之约·我们的川藏之行</h3>
               </a>
             </div>
@@ -105,7 +96,12 @@
       </el-main>
       <el-aside>
         <div class="serch-module">
-          <el-input placeholder="请输入内容" v-model="input" clearable class="serch-input"></el-input>
+          <el-input
+            placeholder="请输入内容"
+            v-model="input"
+            clearable
+            class="serch-input"
+          ></el-input>
           <el-button type="primary" icon="el-icon-search" class="serch-button">搜索</el-button>
         </div>
         <el-menu :default-openeds="['1', '3']">
@@ -114,7 +110,9 @@
               <i class="el-icon-message"></i>导航一
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="1-1">选项1</el-menu-item>
               <el-menu-item index="1-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -122,7 +120,9 @@
               <el-menu-item index="1-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="1-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="1-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -131,7 +131,9 @@
               <i class="el-icon-menu"></i>导航二
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="2-1">选项1</el-menu-item>
               <el-menu-item index="2-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -139,7 +141,9 @@
               <el-menu-item index="2-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="2-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="2-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -148,7 +152,9 @@
               <i class="el-icon-setting"></i>导航三
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="3-1">选项1</el-menu-item>
               <el-menu-item index="3-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -156,7 +162,9 @@
               <el-menu-item index="3-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="3-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="3-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -310,14 +318,7 @@
 </style>
 
 <script>
-const typeOptions = [
-  "象山公园",
-  "两江四湖",
-  "东西巷",
-  "十里画廊",
-  "阳朔西街",
-  "大圩古镇"
-];
+const typeOptions = ["象山公园", "两江四湖", "东西巷", "十里画廊", "阳朔西街", "大圩古镇"];
 export default {
   data() {
     return {

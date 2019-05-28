@@ -19,9 +19,12 @@
                   :indeterminate="isIndeterminate1"
                   v-model="checkAll1"
                   @change="handleCheckAllChange1"
-                >全选</el-checkbox>
+                  >全选</el-checkbox
+                >
                 <el-checkbox-group class="chose-box" v-model="checkedRoutes" :min="0" :max="8">
-                  <el-checkbox v-for="route in routes" :label="route" :key="route">{{ route }}</el-checkbox>
+                  <el-checkbox v-for="route in routes" :label="route" :key="route">{{
+                    route
+                  }}</el-checkbox>
                 </el-checkbox-group>
               </div>
             </div>
@@ -34,9 +37,12 @@
                   :indeterminate="isIndeterminate2"
                   v-model="checkAll2"
                   @change="handleCheckAllChange2"
-                >全选</el-checkbox>
+                  >全选</el-checkbox
+                >
                 <el-checkbox-group class="chose-box" v-model="checkedTypes" :min="0" :max="8">
-                  <el-checkbox v-for="type in types" :label="type" :key="type">{{ type }}</el-checkbox>
+                  <el-checkbox v-for="type in types" :label="type" :key="type">{{
+                    type
+                  }}</el-checkbox>
                 </el-checkbox-group>
               </div>
             </div>
@@ -49,9 +55,12 @@
                   :indeterminate="isIndeterminate3"
                   v-model="checkAll3"
                   @change="handleCheckAllChange3"
-                >不限</el-checkbox>
+                  >不限</el-checkbox
+                >
                 <el-checkbox-group class="chose-box" v-model="checkedTimes" :min="0" :max="8">
-                  <el-checkbox v-for="time in times" :label="time" :key="time">{{ time }}</el-checkbox>
+                  <el-checkbox v-for="time in times" :label="time" :key="time">{{
+                    time
+                  }}</el-checkbox>
                 </el-checkbox-group>
               </div>
             </div>
@@ -64,12 +73,15 @@
                 src="http://b3-q.mafengwo.net/s11/M00/5B/6F/wKgBEFt6J6uAXDi0AE_-fdfiRHE990.gif?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售911</p>
-                <h3>龙脊牧歌 纯玩无购物 8人VIP商务小团龙脊金坑大寨纯玩一日游（ 可选阳朔出发 送竹筒饭 酒店接送 /单双索道）</h3>
+                <h3>
+                  龙脊牧歌 纯玩无购物 8人VIP商务小团龙脊金坑大寨纯玩一日游（ 可选阳朔出发 送竹筒饭
+                  酒店接送 /单双索道）
+                </h3>
                 <div class="s-tag">
                   <span>酒店接送</span>
                   <span>少数民族风情</span>
@@ -94,12 +106,14 @@
                 src="http://n2-q.mafengwo.net/s13/M00/38/4D/wKgEaVx0_OmAeGsXAAhnsjr5rGU50.jpeg?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售130</p>
-                <h3>阳朔深度体验一日游·2-8人小团·遇龙河金龙桥-旧县段·巡游十里画廊·探秘银子岩溶洞·赠送私家庄园下午茶</h3>
+                <h3>
+                  阳朔深度体验一日游·2-8人小团·遇龙河金龙桥-旧县段·巡游十里画廊·探秘银子岩溶洞·赠送私家庄园下午茶
+                </h3>
                 <div class="s-tag">
                   <span>赠定制私享下午茶</span>
                   <span>文艺大片摄影胜地</span>
@@ -124,12 +138,15 @@
                 src="http://b3-q.mafengwo.net/s13/M00/F5/3B/wKgEaVxrn-GABzWTAA_CfSTrpic63.jpeg?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售128</p>
-                <h3>独立包车 桂林龙脊漓江阳朔4日全景包车游（纯玩无车购+入住豪华酒店+赠纪念金币+下午茶）</h3>
+                <h3>
+                  独立包车
+                  桂林龙脊漓江阳朔4日全景包车游（纯玩无车购+入住豪华酒店+赠纪念金币+下午茶）
+                </h3>
                 <div class="s-tag">
                   <span>行程天数可调</span>
                   <span>一对一定制线路</span>
@@ -155,12 +172,14 @@
                 src="http://p3-q.mafengwo.net/s12/M00/93/48/wKgED1vjl1iAFOUoAAJHXN67tRY42.jpeg?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售344</p>
-                <h3>5A全景漓江·四星级豪华游船·商务小车送码头·品质纯玩一日游（全自助餐/多舱位可选/可升级阳朔银子岩/世外桃源/印象刘三姐/桂林千古情）</h3>
+                <h3>
+                  5A全景漓江·四星级豪华游船·商务小车送码头·品质纯玩一日游（全自助餐/多舱位可选/可升级阳朔银子岩/世外桃源/印象刘三姐/桂林千古情）
+                </h3>
                 <div class="s-tag">
                   <span>品质纯玩</span>
                 </div>
@@ -183,12 +202,14 @@
                 src="http://b3-q.mafengwo.net/s12/M00/C4/8A/wKgED1xFd8GAMqi3AC1BCsG8-Wc30.jpeg?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售281</p>
-                <h3>独立包车游▪纯玩▪桂林+漓江+阳朔3日精品游（专属用车+1对1服务+体验竹筏漂流+住豪华酒店+赠5A景区纪念金币）</h3>
+                <h3>
+                  独立包车游▪纯玩▪桂林+漓江+阳朔3日精品游（专属用车+1对1服务+体验竹筏漂流+住豪华酒店+赠5A景区纪念金币）
+                </h3>
                 <div class="s-tag">
                   <span>保证纯玩</span>
                   <span>家庭小团</span>
@@ -214,12 +235,15 @@
                 src="http://b2-q.mafengwo.net/s13/M00/3D/33/wKgEaVxw_UaAaiVZAAJ63CYcE6A41.jpeg?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售358</p>
-                <h3>十六年品质经典 ·赠阳朔接送 ·阳朔印象刘三姐 大型山水实景演出 新贵宾/老贵宾/普通票（可选场次+可选坐席+正规票源）</h3>
+                <h3>
+                  十六年品质经典 ·赠阳朔接送 ·阳朔印象刘三姐 大型山水实景演出
+                  新贵宾/老贵宾/普通票（可选场次+可选坐席+正规票源）
+                </h3>
                 <div class="s-tag">
                   <span>可选场次</span>
                   <span>张艺谋导演作品</span>
@@ -243,12 +267,15 @@
                 src="http://n2-q.mafengwo.net/s13/M00/D9/4A/wKgEaVx0yPGAQz72AAEbT-qK3Lw84.jpeg?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售373</p>
-                <h3>五一黄金时段有票·桂林两江四湖景区/日游一江四湖游船票 夜游两江四湖豪华船 （登船码头取票 方便快捷）</h3>
+                <h3>
+                  五一黄金时段有票·桂林两江四湖景区/日游一江四湖游船票 夜游两江四湖豪华船
+                  （登船码头取票 方便快捷）
+                </h3>
                 <div class="s-tag">
                   <span>码头取票</span>
                   <span>可选时间</span>
@@ -274,12 +301,15 @@
                 src="http://n4-q.mafengwo.net/s12/M00/FB/7A/wKgED1wtZMyADhmCAAT0tujYDMc16.jpeg?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售511</p>
-                <h3>桂林漓江精华一日游||保证纯玩▪ 不车购▪（城徽象鼻山+漓江竹筏+银子岩+兴坪古镇赏20RMB+赠返桂不限天数）</h3>
+                <h3>
+                  桂林漓江精华一日游||保证纯玩▪
+                  不车购▪（城徽象鼻山+漓江竹筏+银子岩+兴坪古镇赏20RMB+赠返桂不限天数）
+                </h3>
                 <div class="s-tag">
                   <span>8人mini团</span>
                   <span>纯玩无隐性消费</span>
@@ -311,12 +341,14 @@
                 src="http://p4-q.mafengwo.net/s9/M00/63/E7/wKgBs1hJCyaAC5eYAAc5vSvH8AQ898.png?imageMogr2%2Fthumbnail%2F%21400x300r%2Fgravity%2FCenter%2Fcrop%2F%21400x300%2Fquality%2F100"
                 height="150"
                 width="200"
-              >
+              />
             </div>
             <div class="detail">
               <div class="info" style="position: relative">
                 <p>月售354</p>
-                <h3>龙脊至巅·桂林龙脊梯田金坑大寨+金佛顶纯玩一日游（2-8人小团直达金坑+真纯玩+送定制矿泉水+自制竹筒饭~小团途径黄洛瑶寨长发村）</h3>
+                <h3>
+                  龙脊至巅·桂林龙脊梯田金坑大寨+金佛顶纯玩一日游（2-8人小团直达金坑+真纯玩+送定制矿泉水+自制竹筒饭~小团途径黄洛瑶寨长发村）
+                </h3>
                 <div class="s-tag">
                   <span>不进店</span>
                   <span>无车购</span>
@@ -337,13 +369,9 @@
                   <strong>120</strong>起
                 </span>
                 <span class="buy-tomorrow">
-                  <span class="icon">
-                    <i></i>
-                  </span>可订明日
+                  <span class="icon"> <i></i> </span>可订明日
                 </span>
-                <span class="promo-txt">
-                  <em>促销</em>减10
-                </span>
+                <span class="promo-txt"> <em>促销</em>减10 </span>
 
                 <span class="discount-tag vip-discount">金卡专享</span>
               </div>
@@ -365,7 +393,9 @@
               <i class="el-icon-message"></i>导航一
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="1-1">选项1</el-menu-item>
               <el-menu-item index="1-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -373,7 +403,9 @@
               <el-menu-item index="1-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="1-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="1-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -382,7 +414,9 @@
               <i class="el-icon-menu"></i>导航二
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="2-1">选项1</el-menu-item>
               <el-menu-item index="2-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -390,7 +424,9 @@
               <el-menu-item index="2-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="2-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="2-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -399,7 +435,9 @@
               <i class="el-icon-setting"></i>导航三
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="3-1">选项1</el-menu-item>
               <el-menu-item index="3-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -407,7 +445,9 @@
               <el-menu-item index="3-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="3-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="3-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -461,8 +501,7 @@ export default {
     handleCheckedRoutesChange(value) {
       let checkedCount = value.length;
       this.checkAll1 = checkedCount === this.routes.length;
-      this.isIndeterminate1 =
-        checkedCount > 0 && checkedCount < this.routes.length;
+      this.isIndeterminate1 = checkedCount > 0 && checkedCount < this.routes.length;
     },
     handleCheckAllChange2(val) {
       this.checkedTypes = val ? typeOptions : [];
@@ -471,8 +510,7 @@ export default {
     handleCheckedTypesChange(value) {
       let checkedCount = value.length;
       this.checkAll2 = checkedCount === this.types.length;
-      this.isIndeterminate2 =
-        checkedCount > 0 && checkedCount < this.types.length;
+      this.isIndeterminate2 = checkedCount > 0 && checkedCount < this.types.length;
     },
     handleCheckAllChange3(val) {
       this.checkedTimes = val ? timeOptions : [];
@@ -481,8 +519,7 @@ export default {
     handleCheckedTimesChange(value) {
       let checkedCount = value.length;
       this.checkAll3 = checkedCount === this.times.length;
-      this.isIndeterminate3 =
-        checkedCount > 0 && checkedCount < this.times.length;
+      this.isIndeterminate3 = checkedCount > 0 && checkedCount < this.times.length;
     }
   }
 };
@@ -649,5 +686,3 @@ img {
   margin-top: 50px;
 }
 </style>
-
-

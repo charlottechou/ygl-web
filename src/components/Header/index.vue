@@ -3,7 +3,7 @@
     <div class="all">
       <div class="left">
         <div class="head-logo">
-          <img src="../../assets/logo.png" class="logo">
+          <img src="../../assets/logo.png" class="logo" />
         </div>
         <div class="menu">
           <el-menu
@@ -18,7 +18,9 @@
             <el-menu-item index="/">首页</el-menu-item>
             <el-menu-item index="news">目的地动态</el-menu-item>
             <el-submenu index="2">
-              <template slot="title">景点</template>
+              <template slot="title"
+                >景点</template
+              >
               <el-menu-item index="/famous">风景名胜</el-menu-item>
               <el-menu-item index="/entertainment">休闲娱乐</el-menu-item>
               <el-menu-item index="/history">人文历史</el-menu-item>

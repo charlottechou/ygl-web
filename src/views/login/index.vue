@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <el-container class="login-all">
-      <img src="../../assets/login-logo.png" alt class="login-img">
+      <img src="../../assets/login-logo.png" alt class="login-img" />
       <el-main class="login-box">
         <el-form ref="form" :model="form" label-width="80px">
           <el-form-item>
@@ -12,7 +12,9 @@
           </el-form-item>
         </el-form>
         <div class="link-button">
-          <el-link :underline="false" class="forreg-button" @click="registe">没有账号？去注册</el-link>
+          <el-link :underline="false" class="forreg-button" @click="registe"
+            >没有账号？去注册</el-link
+          >
           <el-button type="text" class="forpass-button">忘记密码</el-button>
         </div>
         <div class="submit-btn">
@@ -94,4 +96,3 @@ export default {
   }
 };
 </script>
-

@@ -5,7 +5,7 @@
       <el-step title="填写个人资料" icon="el-icon-edit"></el-step>
       <el-step title="完成注册" icon="el-icon-finished"></el-step>
     </el-steps>
-    <div class="userAccount" v-if="active===1">
+    <div class="userAccount" v-if="active === 1">
       <el-form
         :model="ruleForm"
         status-icon
@@ -26,7 +26,7 @@
       </el-form>
       <el-button style="margin-top: 12px;" @click="next" class="next-button1">下一步</el-button>
     </div>
-    <div class="userInfo" v-if="active===2">
+    <div class="userInfo" v-if="active === 2">
       <div class="info-all">
         <el-form ref="form" :model="form" label-width="80px">
           <el-form-item label="昵称">
@@ -62,7 +62,7 @@
         <el-button style="margin-top: 12px;" @click="next" class="next-button2">下一步</el-button>
       </div>
     </div>
-    <div class="finishRegiste" v-if="active===3">
+    <div class="finishRegiste" v-if="active === 3">
       <div class="word-hint">
         <p>您已完成注册！请点击下方按钮进行登录</p>
       </div>
@@ -71,14 +71,7 @@
   </div>
 </template>
 <script>
-const typeOptions = [
-  "休闲娱乐",
-  "人文历史",
-  "美食",
-  "最热门",
-  "网红打卡",
-  "风景名胜"
-];
+const typeOptions = ["休闲娱乐", "人文历史", "美食", "最热门", "网红打卡", "风景名胜"];
 export default {
   data() {
     var checkAge = (rule, value, callback) => {

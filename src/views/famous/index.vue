@@ -13,7 +13,9 @@
             <div class="chose-brand">
               <h5>类型:</h5>
               <el-checkbox-group class="chose-box" v-model="checkedCities" :min="0" :max="9">
-                <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
+                <el-checkbox v-for="city in cities" :label="city" :key="city">{{
+                  city
+                }}</el-checkbox>
               </el-checkbox-group>
             </div>
           </div>
@@ -28,14 +30,16 @@
                   data-rt-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
                   src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
                   style="display: inline;"
-                >
+                />
               </a>
             </div>
             <div class="item-left">
               <div class="item-word">
                 <dl>
                   <dt class="word-title">
-                    <a target="_blank" @click="detail">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
+                    <a target="_blank" @click="detail"
+                      >《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a
+                    >
                   </dt>
                   <dd class="word-content">
                     <a target="_blank" @click="detail">
@@ -73,14 +77,16 @@
                   data-rt-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
                   src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
                   style="display: inline;"
-                >
+                />
               </a>
             </div>
             <div class="item-left">
               <div class="item-word">
                 <dl>
                   <dt class="word-title">
-                    <a target="_blank" @click="detail">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
+                    <a target="_blank" @click="detail"
+                      >《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a
+                    >
                   </dt>
                   <dd class="word-content">
                     <a target="_blank" @click="detail">
@@ -118,14 +124,16 @@
                   data-rt-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
                   src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
                   style="display: inline;"
-                >
+                />
               </a>
             </div>
             <div class="item-left">
               <div class="item-word">
                 <dl>
                   <dt class="word-title">
-                    <a target="_blank" @click="detail">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
+                    <a target="_blank" @click="detail"
+                      >《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a
+                    >
                   </dt>
                   <dd class="word-content">
                     <a target="_blank" @click="detail">
@@ -163,14 +171,16 @@
                   data-rt-src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
                   src="http://b3-q.mafengwo.net/s13/M00/66/8E/wKgEaVy2zFiAY9iTAAOcHTg0dXE93.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
                   style="display: inline;"
-                >
+                />
               </a>
             </div>
             <div class="item-left">
               <div class="item-word">
                 <dl>
                   <dt class="word-title">
-                    <a target="_blank" @click="detail">《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a>
+                    <a target="_blank" @click="detail"
+                      >《稻城亚丁色达八日游》8天包车川西大环线流水账游记</a
+                    >
                   </dt>
                   <dd class="word-content">
                     <a target="_blank" @click="detail">
@@ -206,7 +216,12 @@
       </el-main>
       <el-aside>
         <div class="serch-module">
-          <el-input placeholder="请输入内容" v-model="input" clearable class="serch-input"></el-input>
+          <el-input
+            placeholder="请输入内容"
+            v-model="input"
+            clearable
+            class="serch-input"
+          ></el-input>
           <el-button type="primary" icon="el-icon-search" class="serch-button">搜索</el-button>
         </div>
         <el-menu :default-openeds="['1', '3']">
@@ -215,7 +230,9 @@
               <i class="el-icon-message"></i>导航一
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="1-1">选项1</el-menu-item>
               <el-menu-item index="1-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -223,7 +240,9 @@
               <el-menu-item index="1-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="1-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="1-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -232,7 +251,9 @@
               <i class="el-icon-menu"></i>导航二
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="2-1">选项1</el-menu-item>
               <el-menu-item index="2-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -240,7 +261,9 @@
               <el-menu-item index="2-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="2-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="2-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
@@ -249,7 +272,9 @@
               <i class="el-icon-setting"></i>导航三
             </template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
+              <template slot="title"
+                >分组一</template
+              >
               <el-menu-item index="3-1">选项1</el-menu-item>
               <el-menu-item index="3-2">选项2</el-menu-item>
             </el-menu-item-group>
@@ -257,7 +282,9 @@
               <el-menu-item index="3-3">选项3</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="3-4">
-              <template slot="title">选项4</template>
+              <template slot="title"
+                >选项4</template
+              >
               <el-menu-item index="3-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
