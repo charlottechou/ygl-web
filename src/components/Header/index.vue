@@ -3,7 +3,7 @@
     <div class="all">
       <div class="left">
         <div class="head-logo">
-          <img src="../../assets/logo.png" class="logo" />
+          <img src="../../assets/logo.png" class="logo">
         </div>
         <div class="menu">
           <el-menu
@@ -18,9 +18,7 @@
             <el-menu-item index="/">首页</el-menu-item>
             <el-menu-item index="news">目的地动态</el-menu-item>
             <el-submenu index="2">
-              <template slot="title"
-                >景点</template
-              >
+              <template slot="title">景点</template>
               <el-menu-item index="/famous">风景名胜</el-menu-item>
               <el-menu-item index="/entertainment">休闲娱乐</el-menu-item>
               <el-menu-item index="/history">人文历史</el-menu-item>
@@ -33,7 +31,7 @@
           </el-menu>
         </div>
       </div>
-      <div class="button">
+      <div v-if="!isLogin" class="button">
         <div class="login-button" @select="handleSelect">
           <el-button type="text" @click="login">登录</el-button>
         </div>
@@ -42,16 +40,47 @@
           <el-button type="text" @click="registe">注册</el-button>
         </div>
       </div>
+      <div v-if="isLogin" class="succuss-login">
+        <div class="user-concert">
+          <el-col :span="24">
+            <el-dropdown @command="handleCommand">
+              <span class="el-dropdown-link">
+                <el-image
+                  style="width: 25px; height: 25px;margin-right:10px;"
+                  :src="url"
+                  :fit="cover"
+                ></el-image>绿豆周
+                <i class="el-icon-arrow-down el-icon--right"></i>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item command="a" icon="el-icon-user">个人中心</el-dropdown-item>
+                <el-dropdown-item command="logout" icon="el-icon-unlock">退出登录</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </el-col>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
+import { eventBus } from "@/utils/eventBus.js";
+import { removeToken, getToken } from "@/utils/auth.js";
 export default {
   data() {
     return {
       activeIndex: "1",
-      activeIndex2: "1"
+      activeIndex2: "1",
+      url:
+        "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+      isLogin: getToken() ? true : false
     };
+  },
+  mounted() {
+    eventBus.$on("loginOrLogout", this.loginOrLogout);
+  },
+  destroyed() {
+    eventBus.$off("loginOrLogout", this.loginOrLogout);
   },
   methods: {
     handleSelect(key) {
@@ -62,6 +91,18 @@ export default {
     },
     registe: function() {
       this.$router.push("/registe");
+    },
+    loginOrLogout() {
+      this.isLogin = !this.isLogin;
+    },
+    handleCommand(command) {
+      if (command === "logout") {
+        // 执行退出登录
+        this.isLogin = false;
+        removeToken();
+      } else if (command === "a") {
+        //跳转个人中心
+      }
     }
   }
 };
@@ -93,6 +134,26 @@ export default {
   align-items: center;
   margin-left: 180px;
 }
+.user-concert {
+  margin-top: 17px;
+  margin-left: 130px;
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #ffd04b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
+}
+.demonstration {
+  display: block;
+  color: #8492a6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
 .login-button {
   margin-right: 2px;
   display: flex;
@@ -107,5 +168,9 @@ export default {
   overflow: hidden;
   vertical-align: -2px;
   *vertical-align: middle;
+}
+img {
+  width: 15px;
+  height: 15px;
 }
 </style>

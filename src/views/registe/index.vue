@@ -49,7 +49,7 @@
             </el-col>
           </el-form-item>
           <el-form-item label="感兴趣" class="type-box">
-            <el-checkbox-group v-model="form.type">
+            <el-checkbox-group v-model="checkedTypes">
               <el-checkbox label="最热门" name="type"></el-checkbox>
               <el-checkbox label="网红打卡" name="type"></el-checkbox>
               <el-checkbox label="休闲娱乐" name="type"></el-checkbox>

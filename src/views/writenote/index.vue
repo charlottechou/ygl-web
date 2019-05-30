@@ -2,7 +2,7 @@
   <div class="writenote">
     <div class="img-all">
       <div class="img-bg">
-        <img src="..\..\assets\page_bg.png" width="1500px" />
+        <img src="..\..\assets\page_bg.png" width="1500px">
       </div>
       <div class="img-up">
         <div class="img-bn">
@@ -13,7 +13,7 @@
             :on-success="handleAvatarSuccess"
             :before-upload="beforeAvatarUpload"
           >
-            <img v-if="imageUrl" :src="imageUrl" class="avatar" />
+            <img v-if="imageUrl" :src="imageUrl" class="avatar">
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
           </el-upload>
         </div>
@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="set_title">
-          <input type="text" id="_j_title" value placeholder="填写游记标题" maxlength="48" />
+          <input type="text" id="_j_title" value placeholder="填写游记标题" maxlength="48">
           <span>
             可输入
             <strong>48</strong>字
@@ -34,7 +34,7 @@
       </div>
     </div>
     <el-container>
-      <el-main style="margin-left:50px;">
+      <el-main>
         <!-- <div class="content">
           <div class="content_box">
             <el-input
@@ -46,140 +46,10 @@
             ></el-input>
           </div>
         </div>-->
-        <div
-          id="pagelet-block-bbce542b8b347d2e5164c2cdfc260f34"
-          class="content pagelet-block"
-          data-controller="/js/note/ControllerEditContent"
-          data-controller_data='{"id":"473361569"}'
-        >
-          <div class="block-loading loading_backward"></div>
-          <div class="_j_content_box">
-            <div
-              class="textarea_placeholder _j_plc_item _j_inited with_placeholder_word"
-              data-afterseq="0"
-            >
-              <textarea
-                cols="200"
-                rows="max"
-                placeholder="从这里开始游记正文..."
-                style=" height: 500px;width:100%;
-                border:none"
-              ></textarea>
-            </div>
-          </div>
+        <div id="father">
+          <wangeditor :catchData="catchData"></wangeditor>
         </div>
-        <a role="button">
-          <button class="btn-publish _j_btn_publish">发表游记</button>
-        </a>
       </el-main>
-
-      <el-aside class="add-btn">
-        <el-upload
-          class="upload-demo"
-          action="https://jsonplaceholder.typicode.com/posts/"
-          :on-preview="handlePreview"
-          :on-remove="handleRemove"
-          :file-list="fileList"
-          list-type="picture"
-          style="margin-bottom:50px;margin-top:50px;"
-        >
-          <el-button type="warning" plain icon="el-icon-picture-outline">插入图片</el-button>
-          <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-        </el-upload>
-        <el-button
-          type="warning"
-          plain
-          @click="title_dialogVisible = true"
-          icon="el-icon-s-flag"
-          style="width:127px;margin-bottom:50px;"
-          >插入标题</el-button
-        >
-        <el-dialog
-          title="提示"
-          :visible.sync="title_dialogVisible"
-          width="30%"
-          :before-close="handleClose"
-        >
-          <el-input
-            type="text"
-            placeholder="请输入标题"
-            v-model="text"
-            maxlength="10"
-            show-word-limit
-          ></el-input>
-          <span slot="footer" class="dialog-footer">
-            <el-button @click="title_dialogVisible = false">取 消</el-button>
-            <el-button type="warning" @click="title_dialogVisible = false">确 定</el-button>
-          </span>
-        </el-dialog>
-
-        <el-button
-          type="warning"
-          plain
-          @click="flag_dialogVisible = true"
-          icon="el-icon-guide"
-          style="width:127px;"
-          >插入标签</el-button
-        >
-        <el-dialog
-          title="提示"
-          :visible.sync="flag_dialogVisible"
-          width="30%"
-          :before-close="handleClose"
-        >
-          <el-form
-            :model="ruleForm"
-            :rules="rules"
-            ref="ruleForm"
-            label-width="100px"
-            class="demo-ruleForm"
-          >
-            <el-form-item label="旅行时间">
-              <el-col :span="11">
-                <el-date-picker
-                  type="date"
-                  placeholder="选择日期"
-                  v-model="form.date1"
-                  style="width: 100%;"
-                ></el-date-picker>
-              </el-col>
-              <el-col class="line" :span="2">-</el-col>
-              <el-col :span="11">
-                <el-date-picker
-                  type="date"
-                  placeholder="选择日期"
-                  v-model="form.date2"
-                  style="width: 100%;"
-                ></el-date-picker>
-              </el-col>
-            </el-form-item>
-            <el-form-item label="旅行人数">
-              <el-select v-model="form.region" placeholder="请选择人数">
-                <el-option label="1人" value="one"></el-option>
-                <el-option label="2人" value="two"></el-option>
-                <el-option label="3人" value="three"></el-option>
-                <el-option label="4人" value="four"></el-option>
-                <el-option label="5人及以上" value="five and more"></el-option>
-              </el-select>
-            </el-form-item>
-            <el-form-item label="人均费用">
-              <el-input v-model="form.fare"></el-input>
-            </el-form-item>
-            <el-form-item label="人物关系">
-              <el-checkbox-group v-model="form.type" :max="1">
-                <el-checkbox label="情侣/夫妻" name="type"></el-checkbox>
-                <el-checkbox label="父母/子女" name="type"></el-checkbox>
-                <el-checkbox label="家人/朋友" name="type"></el-checkbox>
-                <el-checkbox label="同事/旅行团" name="type"></el-checkbox>
-              </el-checkbox-group>
-            </el-form-item>
-          </el-form>
-          <span slot="footer" class="dialog-footer">
-            <el-button @click="flag_dialogVisible = false">取 消</el-button>
-            <el-button type="warning" @click="flag_dialogVisible = false">确 定</el-button>
-          </span>
-        </el-dialog>
-      </el-aside>
     </el-container>
   </div>
 </template>
@@ -363,6 +233,7 @@ textarea {
 </style>
 
 <script>
+import wangeditor from "../../components/wangeditor";
 export default {
   data() {
     return {
@@ -379,9 +250,20 @@ export default {
         date1: "",
         date2: "",
         delivery: false
-      }
+      },
+      content: ""
     };
   },
+
+  mounted() {
+    // wangeditor
+    phoneEditor = new E("phoneEditorElem");
+    phoneEditor.onchange = function() {
+      this.formData.phone = this.$txt.html();
+    };
+    phoneEditor.create();
+  },
+
   methods: {
     handleAvatarSuccess(res, file) {
       this.imageUrl = URL.createObjectURL(file.raw);
@@ -413,7 +295,13 @@ export default {
     },
     onSubmit() {
       console.log("submit!");
+    },
+    catchData(value) {
+      this.content = value; //在这里接受子组件传过来的参数，赋值给data里的参数
     }
+  },
+  components: {
+    wangeditor
   }
 };
 </script>

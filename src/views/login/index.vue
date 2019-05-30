@@ -74,6 +74,7 @@
 <script>
 import { Auth } from "@/api/login.js";
 import { setToken } from "@/utils/auth.js";
+import { eventBus } from "@/utils/eventBus.js";
 export default {
   data() {
     return {
@@ -85,10 +86,17 @@ export default {
   },
   methods: {
     onSubmit() {
-      Auth(this.form).then(resp => {
-        setToken(resp.data.token);
-        this.$message(resp.message);
-      });
+      Auth(this.form)
+        .then(resp => {
+          // 请求成功
+          setToken(resp.data.token);
+          this.$message(resp.message);
+          eventBus.$emit("loginOrLogout");
+          this.$router.push("/");
+        })
+        .catch(resaon => {
+          // 请求失败
+        });
     },
     login: function() {
       this.$router.push("/login");

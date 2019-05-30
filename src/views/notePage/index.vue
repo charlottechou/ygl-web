@@ -5,7 +5,7 @@
         src="http://mpic.tiankong.com/7e2/29f/7e229fe9758ea4146a881b72f6bdebbb/640.jpg@%21670w"
         alt
         class="img-self"
-      />
+      >
     </div>
 
     <div class="item-word">
@@ -18,9 +18,7 @@
         id="pagelet-block-93e24690bf22654412451b40ea3c8030"
         class="pagelet-block"
         data-api=":note:pagelet:headOperateApi"
-        data-params='{"iid":"12151694"}'
         data-async="1"
-        data-controller="/js/note/ControllerHead"
       >
         <div class="vt_center">
           <div class="ding _j_ding_father">
@@ -45,16 +43,16 @@
                 height="120"
                 src="https://p3-q.mafengwo.net/s11/M00/97/BC/wKgBEFthjcCAWN9gAAALxKv7rNs19.jpeg?imageMogr2%2Fthumbnail%2F%21200x200r%2Fgravity%2FCenter%2Fcrop%2F%21200x200%2Fquality%2F90"
                 alt
-              />
+              >
             </a>
             <strong>
-              <a href="/u/88409393.html" target="_blank" class="per_name" title="卡拉的姐姐">
-                卡拉的姐姐 (成都)
-              </a>
+              <a href="/u/88409393.html" target="_blank" class="per_name" title="卡拉的姐姐">卡拉的姐姐 (成都)</a>
             </strong>
             <div class="vc_time">
               <span class="time">2019-03-24 00:53</span>
-              <span> <i class="ico_view"></i>8156/57 </span>
+              <span>
+                <i class="ico_view"></i>8156/57
+              </span>
             </div>
           </div>
           <div class="bar_share _j_share_father _j_top_share_group">
@@ -89,55 +87,9 @@
         </div>
       </div>
     </div>
-    <div class="note-content">
-      <div class="travel_directory _j_exscheduleinfo">
-        <div class="tarvel_dir_list clearfix">
-          <ul>
-            <li class="time">
-              出发时间
-              <span>/</span>2018-10-01
-              <i></i>
-            </li>
-            <li class="day">
-              出行天数
-              <span>/</span>7 天
-            </li>
-            <li class="people">
-              人物
-              <span>/</span>和同学
-            </li>
-            <li class="cost">
-              人均费用
-              <span>/</span>3000RMB
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="block">
-        <el-timeline>
-          <el-timeline-item timestamp="2018/4/12" placement="top">
-            <el-card>
-              <h4>更新 Github 模板</h4>
-              <p>王小虎 提交于 2018/4/12 20:46</p>
-            </el-card>
-          </el-timeline-item>
-          <el-timeline-item timestamp="2018/4/3" placement="top">
-            <el-card>
-              <h4>更新 Github 模板</h4>
-              <p>王小虎 提交于 2018/4/3 20:46</p>
-            </el-card>
-          </el-timeline-item>
-          <el-timeline-item timestamp="2018/4/2" placement="top">
-            <el-card>
-              <h4>更新 Github 模板</h4>
-              <p>王小虎 提交于 2018/4/2 20:46</p>
-            </el-card>
-          </el-timeline-item>
-        </el-timeline>
-      </div>
-    </div>
   </div>
 </template>
+
 <style scoped>
 .notePage {
 }
@@ -344,7 +296,8 @@ ol {
   line-height: 22px;
   color: #666;
   padding-left: 4%;
-  background: url(http://css.mafengwo.net/images/post/new_notes/151204sprite1.png) no-repeat;
+  background: url(http://css.mafengwo.net/images/post/new_notes/151204sprite1.png)
+    no-repeat;
   cursor: pointer;
 }
 .tarvel_dir_list ul li span {
